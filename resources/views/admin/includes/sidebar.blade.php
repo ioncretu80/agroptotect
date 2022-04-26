@@ -19,7 +19,16 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
 
+                <li class="nav-item">
+                    <a href="{{route('admin.udobrenie.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-seedling"></i>
 
+                        <p>
+                            Udobrenie
+                            <span class="badge badge-info right">{{\App\Models\Udobrenie::count()}}</span>
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="{{route('admin.grupa_kultur.index')}}" class="nav-link">
                         <i class="nav-icon fab fa-canadian-maple-leaf"></i>
@@ -31,14 +40,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="pages/gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
-                        <p>
-                            Gallery
-                        </p>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a href="pages/kanban.html" class="nav-link">
                         <i class="nav-icon fas fa-columns"></i>

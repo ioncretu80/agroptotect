@@ -30,6 +30,17 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 
         Route::patch('/{grupa_kultur}', 'UpdateController')->name('admin.grupa_kultur.update');
         Route::delete('/{grupa_kultur}', 'DeleteController')->name('admin.grupa_kultur.delete');
     });
+
+    Route::group(['namespace' => 'Udobrenie',"prefix"=>"udobrenie"], function () {
+        Route::get('/', 'IndexController')->name('admin.udobrenie.index');
+        Route::get('/create', 'CreateController')->name('admin.udobrenie.create');
+        Route::post('/', 'StoreController')->name('admin.udobrenie.store');
+        Route::get('/{udobrenie}', 'ShowController')->name('admin.udobrenie.show');
+        Route::get('/{udobrenie}/edit', 'EditController')->name('admin.udobrenie.edit');
+        Route::patch('/{udobrenie}', 'UpdateController')->name('admin.udobrenie.update');
+        Route::delete('/{udobrenie}', 'DeleteController')->name('admin.udobrenie.delete');
+    });
+
 });
 
 
